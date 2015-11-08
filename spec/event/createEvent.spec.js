@@ -32,12 +32,12 @@ describe("createEvent(eventData, documentClient, context)", () => {
         it("should respond to HTTP method 'POST'", () => {
             awsmFile.apiGateway.cloudFormation.Method.should.eql("POST");
         });
-        it("should repond with http status code 200", () => {
+        it("should repond with http status code '200'", () => {
             awsmFile.apiGateway.cloudFormation.Responses.default.statusCode.should.eql("200");
         });
     });
 
-    it("should take the request body and insert it into a dynamodb database", done => {
+    it("should take the request body and insert it into dynamodb", done => {
         context.done = sinon.spy(() => {
             const parameters = {
                 TableName: `events-${process.env.JAWS_STAGE}`,
