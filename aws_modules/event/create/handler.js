@@ -9,7 +9,7 @@ exports.handler = handler;
  * https://github.com/speedskater/babel-plugin-rewire/issues/71
  */
 var AWS = require("aws-sdk");
-var createEvent = require("./action.js");
+var createEvent = require("./action.js").default;
 
 /**
  * Handle a create event request
@@ -20,7 +20,7 @@ var createEvent = require("./action.js");
  * @return {undefined}                  Returns nothing
  */
 function handler(event, context) {
-  var documentClient = new AWS.DynamoDB.DocumentClient();
+  var documentClient = new AWS.DynamoDB.DocumentClient({ region: "us-east-1" });
 
   createEvent(event, documentClient, function (error) {
     context.done(error, "");

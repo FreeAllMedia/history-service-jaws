@@ -11,6 +11,8 @@ var _nodeUuid2 = _interopRequireDefault(_nodeUuid);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+require("jaws-core-js/env");
+
 /**
  * Create an entry for the event in the DynamoDB table
  *

@@ -1,5 +1,7 @@
 import uuid from "node-uuid";
 
+require("jaws-core-js/env");
+
 /**
  * Create an entry for the event in the DynamoDB table
  *
