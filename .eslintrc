@@ -175,7 +175,7 @@
     "no-underscore-dangle": 0,
     "no-unneeded-ternary": 1,
     "object-curly-spacing": 0, // see Babel section
-    "one-var": [1, "always"],
+    "one-var": [1, "never"],
     "operator-assignment": [1, "never"],
     "padded-blocks": [0, "never"],
     "quote-props": [0, "as-needed"],

@@ -1,0 +1,55 @@
+import sinon from "sinon";
+import rewire from "rewire";
+
+const handlerModule = rewire("../../../aws_modules_es6/event/create/handler.js");
+const handler = handlerModule.handler;
+
+describe(".handler(event, context)", () => {
+    let mockEvent;
+    let mockAWS;
+    let mockCreateEvent;
+    let mockDocumentClient;
+
+    beforeEach(() => {
+        mockEvent = require("./event.json");
+
+        mockDocumentClient = sinon.spy();
+
+        mockAWS = {
+            DynamoDB: {
+                DocumentClient: () => {
+                    return mockDocumentClient;
+                }
+            }
+        };
+
+        mockCreateEvent = sinon.spy((event, documentClient, callback) => {
+            callback();
+        });
+
+        handlerModule.__set__("AWS", mockAWS);
+        handlerModule.__set__("createEvent", mockCreateEvent);
+    });
+
+    it("should pass the event to createEvent", done => {
+        const mockContext = {
+            done: () => {
+                mockCreateEvent.calledWith(mockEvent).should.be.true;
+                done();
+            }
+        };
+
+        handler(mockEvent, mockContext);
+    });
+
+    it("should pass the documentClient to createEvent", done => {
+        const mockContext = {
+            done: () => {
+                mockCreateEvent.calledWith(mockEvent, mockDocumentClient).should.be.true;
+                done();
+            }
+        };
+
+        handler(mockEvent, mockContext);
+    });
+});

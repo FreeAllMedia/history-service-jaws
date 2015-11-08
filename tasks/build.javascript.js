@@ -8,8 +8,6 @@ const paths = {
 
 gulp.task("build-javascript", () => {
     return gulp.src(paths.source)
-        .pipe(babel({
-            presets: ["es2015"]
-        }))
+        .pipe(babel())
         .pipe(gulp.dest(paths.destination));
 });
