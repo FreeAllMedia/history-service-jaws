@@ -1,0 +1,38 @@
+{
+  "name": "history-service-jaws",
+  "version": "0.0.1",
+  "description": "A JAWS application",
+  "author": "me",
+  "license": "",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "aws-sdk": "^2.2.15",
+    "babel": "^6.0.15",
+    "babel-eslint": "^4.1.4",
+    "babel-plugin-rewire": "^0.1.22",
+    "babel-preset-es2015": "^6.1.2",
+    "chai": "^3.4.0",
+    "del": "^2.0.2",
+    "eslint": "^1.9.0",
+    "eslint-plugin-babel": "^2.1.1",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.0",
+    "gulp-mocha": "^2.1.3",
+    "gulp-run": "^1.6.11",
+    "gulp-shell": "^0.5.1",
+    "mocha": "^2.3.3",
+    "rewire": "^2.3.4",
+    "run-sequence": "^1.1.4",
+    "sinon": "^1.17.2",
+    "uuid-1345": "^0.99.6"
+  },
+  "dependencies": {
+    "jaws-core-js": "~0.0.2",
+    "node-uuid": "^1.4.3"
+  }
+}

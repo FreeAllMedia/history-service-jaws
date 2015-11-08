@@ -1,0 +1,28 @@
+{
+  "name": "history-service-jaws",
+  "version": "0.0.1",
+  "location": "https://github.com/...",
+  "author": "",
+  "description": "",
+  "domain": "myapp-Eyqv0wLG.com",
+  "stages": {
+    "dev": [
+      {
+        "region": "us-east-1",
+        "iamRoleArnLambda": "arn:aws:iam::166191841105:role/dev-history-service-jaws-r-IamRoleLambda-RZWGZFQTDBRL",
+        "iamRoleArnApiGateway": "arn:aws:iam::166191841105:role/dev-history-service-jaws-r-IamRoleApiGateway-1KWOIWOU0TZXD",
+        "jawsBucket": "jaws.dev.useast1.myapp-eyqv0wlg.com",
+        "restApiId": "ciyf6rhz1c"
+      }
+    ],
+    "development": [
+      {
+        "region": "us-east-1",
+        "iamRoleArnLambda": "arn:aws:iam::166191841105:role/development-history-service-jaws-r-IamRoleLambda-WFHHXBEJZIS1",
+        "iamRoleArnApiGateway": "arn:aws:iam::166191841105:role/development-history-service-jaws-IamRoleApiGateway-9EOS09T9NGYJ",
+        "jawsBucket": "jaws.development.useast1.myapp-eyqv0wlg.com",
+        "restApiId": "utyruxep6e"
+      }
+    ]
+  }
+}
