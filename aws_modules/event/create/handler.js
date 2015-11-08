@@ -23,6 +23,6 @@ function handler(event, context) {
   var documentClient = new AWS.DynamoDB.DocumentClient({ region: "us-east-1" });
 
   createEvent(event, documentClient, function (error) {
-    context.done(error, "");
+    context.done(error, "OK");
   });
 }

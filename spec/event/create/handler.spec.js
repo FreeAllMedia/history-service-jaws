@@ -52,4 +52,15 @@ describe(".handler(event, context)", () => {
 
         handler(mockEvent, mockContext);
     });
+
+    it("should return the string 'OK' as the response body", done => {
+        const mockContext = {
+            done: sinon.spy(() => {
+                mockContext.done.calledWith(undefined, "OK").should.be.true;
+                done();
+            })
+        };
+
+        handler(mockEvent, mockContext);
+    });
 });
