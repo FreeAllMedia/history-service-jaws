@@ -15,8 +15,7 @@
         "includePaths": []
       },
       "excludePatterns": [
-        "node_modules/(?!jaws-core-js|dotenv|macaddress|node-uuid)[a-zA-Z-]+",
-        "aws_modules_es6"
+        "node_modules/(?!jaws-core-js|dotenv|macaddress|node-uuid)[a-zA-Z-]+"
       ]
     },
     "cloudFormation": {

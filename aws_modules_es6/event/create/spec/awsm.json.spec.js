@@ -1,4 +1,4 @@
-import awsmFile from "../../../aws_modules_es6/event/create/awsm.json";
+import awsmFile from "../awsm.json";
 
 describe("awsm.json", () => {
     describe("apiGateway", () => {

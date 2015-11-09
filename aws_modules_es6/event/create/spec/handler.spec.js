@@ -1,7 +1,7 @@
 import sinon from "sinon";
 import rewire from "rewire";
 
-const handlerModule = rewire("../../../aws_modules_es6/event/create/handler.js");
+const handlerModule = rewire("../handler.js");
 const handler = handlerModule.handler;
 
 describe(".handler(event, context)", () => {

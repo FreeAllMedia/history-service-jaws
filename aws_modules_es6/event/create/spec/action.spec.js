@@ -1,5 +1,5 @@
 import sinon from "sinon";
-import createEvent from "../../../aws_modules_es6/event/create/action.js";
+import createEvent from "../action.js";
 
 process.env.JAWS_STAGE = "testing";
 
