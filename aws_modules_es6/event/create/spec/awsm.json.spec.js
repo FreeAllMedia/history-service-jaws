@@ -1,7 +1,7 @@
 import awsmFile from "../awsm.json";
 
-describe("awsm.json", () => {
-    describe("apiGateway", () => {
+describe("event/create/awsm.json", () => {
+    describe("API Gateway", () => {
         it("should have an endpoint of 'event/create'", () => {
             awsmFile.apiGateway.cloudFormation.Path.should.eql("event/create");
         });

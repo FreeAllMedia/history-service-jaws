@@ -4,7 +4,7 @@ import rewire from "rewire";
 const handlerModule = rewire("../handler.js");
 const handler = handlerModule.handler;
 
-describe(".handler(event, context)", () => {
+describe("event/create/handler.js", () => {
     let mockEvent;
     let mockAWS;
     let mockCreateEvent;

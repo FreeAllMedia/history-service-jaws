@@ -6,8 +6,8 @@ var _awsm2 = _interopRequireDefault(_awsm);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-describe("awsm.json", function () {
-    describe("apiGateway", function () {
+describe("event/create/awsm.json", function () {
+    describe("API Gateway", function () {
         it("should have an endpoint of 'event/create'", function () {
             _awsm2.default.apiGateway.cloudFormation.Path.should.eql("event/create");
         });

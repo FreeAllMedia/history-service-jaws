@@ -12,16 +12,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 process.env.JAWS_STAGE = "testing";
 
-describe("createEvent(eventData, documentClient, callback)", function () {
+describe("event/create/action.js", function () {
     var eventData = undefined;
     var documentClient = undefined;
 
     beforeEach(function () {
-        eventData = {
-            userId: 1,
-            name: "Clicked Link",
-            ipAddress: "127.0.0.1"
-        };
+        eventData = require("./event.json");
 
         documentClient = {
             put: _sinon2.default.spy(function (parameters, callback) {

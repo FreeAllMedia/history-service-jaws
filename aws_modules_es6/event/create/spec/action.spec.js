@@ -3,16 +3,12 @@ import createEvent from "../action.js";
 
 process.env.JAWS_STAGE = "testing";
 
-describe("createEvent(eventData, documentClient, callback)", () => {
+describe("event/create/action.js", () => {
     let eventData;
     let documentClient;
 
     beforeEach(() => {
-        eventData = {
-            userId: 1,
-            name: "Clicked Link",
-            ipAddress: "127.0.0.1"
-        };
+        eventData = require("./event.json");
 
         documentClient = {
             put: sinon.spy((parameters, callback) => {

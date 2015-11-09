@@ -13,7 +13,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var handlerModule = (0, _rewire2.default)("../handler.js");
 var handler = handlerModule.handler;
 
-describe(".handler(event, context)", function () {
+describe("event/create/handler.js", function () {
     var mockEvent = undefined;
     var mockAWS = undefined;
     var mockCreateEvent = undefined;
