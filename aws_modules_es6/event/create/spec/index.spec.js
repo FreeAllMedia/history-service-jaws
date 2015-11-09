@@ -1,14 +1,14 @@
 import sinon from "sinon";
-import createEvent from "../action.js";
+import createEvent from "../index.js";
 
 process.env.JAWS_STAGE = "testing";
 
-describe("event/create/action.js", () => {
+describe("event/create/index.js", () => {
     let eventData;
     let documentClient;
 
     beforeEach(() => {
-        eventData = require("./event.json");
+        eventData = require("../event.json");
 
         documentClient = {
             put: sinon.spy((parameters, callback) => {

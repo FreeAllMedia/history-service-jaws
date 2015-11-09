@@ -9,7 +9,7 @@ exports.handler = handler;
  * https://github.com/speedskater/babel-plugin-rewire/issues/71
  */
 var AWS = require("aws-sdk");
-var createEvent = require("./action.js").default;
+var createEvent = require("./index.js").default;
 
 /**
  * Handle a create event request

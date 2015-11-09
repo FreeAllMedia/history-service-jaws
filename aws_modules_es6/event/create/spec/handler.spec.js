@@ -11,7 +11,7 @@ describe("event/create/handler.js", () => {
     let mockDocumentClient;
 
     beforeEach(() => {
-        mockEvent = require("./event.json");
+        mockEvent = require("../event.json");
 
         mockDocumentClient = sinon.spy();
 

@@ -4,15 +4,15 @@ var _sinon = require("sinon");
 
 var _sinon2 = _interopRequireDefault(_sinon);
 
-var _action = require("../action.js");
+var _index = require("../index.js");
 
-var _action2 = _interopRequireDefault(_action);
+var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 process.env.JAWS_STAGE = "testing";
 
-describe("event/create/action.js", function () {
+describe("event/create/index.js", function () {
     var eventData = undefined;
     var documentClient = undefined;
 
@@ -27,7 +27,7 @@ describe("event/create/action.js", function () {
     });
 
     it("should take the request body and insert it into dynamodb", function (done) {
-        (0, _action2.default)(eventData, documentClient, function (error) {
+        (0, _index2.default)(eventData, documentClient, function (error) {
             if (error) {
                 throw error;
             }

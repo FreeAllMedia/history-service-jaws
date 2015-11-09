@@ -3,7 +3,7 @@
  * https://github.com/speedskater/babel-plugin-rewire/issues/71
  */
 const AWS = require("aws-sdk");
-const createEvent = require("./action.js").default;
+const createEvent = require("./index.js").default;
 
 /**
  * Handle a create event request
